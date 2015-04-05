@@ -14,5 +14,8 @@
         "incenteev-parameters": {
             "file": "parameters.yml"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.6"
     }
 }
