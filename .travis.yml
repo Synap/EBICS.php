@@ -1,0 +1,11 @@
+language: php
+php:
+  - 5.4
+
+install:
+  - composer install --dev --prefer-dist
+
+script:
+  - ./vendor/bin/phpcs --warning-severity=0 --standard=PSR2 src tests
+  - ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+  - ./vendor/bin/phpcpd src/ tests/
