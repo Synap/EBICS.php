@@ -1,0 +1,73 @@
+<HIARequestOrderData xmlns="http://www.ebics.org/H003" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ebics.org/H003 http://www.ebics.org/H003/ebics_orders.xsd">
+  <AuthenticationPubKeyInfo>
+    <ds:X509Data>
+      <ds:X509IssuerSerial>
+        <ds:X509IssuerName>CN=OpenConcerto</ds:X509IssuerName>
+        <ds:X509SerialNumber>01</ds:X509SerialNumber>
+      </ds:X509IssuerSerial>
+      <ds:X509Certificate>MIIDQzCCAiugAwIBAgIBATANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJGUjEOMAwGA1UECgwF
+U3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZGcmFuY2UxHzAdBgkqhkiG9w0B
+CQEWEGNvbnRhY3RAc3luYXAuZnIwHhcNMTUwNDA4MjIyNDAwWhcNMjAwNDA4MjIyNDUwWjBlMQsw
+CQYDVQQGEwJGUjEOMAwGA1UECgwFU3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQI
+DAZGcmFuY2UxHzAdBgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCVLWvq5Li2WwN3ZrvEkwc6FoGELhP9TxOEHLRudpf2yijhUCnHbM3x
+AGCIhYXB5r3TtnVZQo88U5UbH81nd0iXgHuJXnFuHA0YSegn2mRH+zTmUz9zXid/+4ScvJ6mR0Hl
+CPYZSX34xVtKSCnLA+s//07XLihAC9bd++oK9BPcjSPPmcZIExQXePWlZqpPkfPpnGk/6jpXgygq
+ZWkjIdVF+r4p54X24POqeYnoguG/3L+D8cnSlMWHs28oRJ4jT9NX9X3VjvlkDwjln+L6VTv8VSWj
+xq1YKvmN4EvKADsXVbVwUBXDSV427mNTZzvlqWX8jQKjfRvO2JIRz9D8u4dbAgMBAAEwDQYJKoZI
+hvcNAQELBQADggEBABPzNzAcDPaf5Ii3Z8NoCo/kftegVNRQSADpH8Y+5XERB+XqxVdlxxxbG/oz
+pRh97bNWedL0ncLs2rF8Os9R6Xi3z1Hge4ez/F314DZ6T6zsDvvSaT5IjbN+VtFlzIwoyc185c6Y
+qKso3rr5qSSWK0hBnsFuqCu4h6y2ikrpQSZPu+mZoKfMkA6xyvIOkvbS9Wv8oIY1+qgyyjlfAsqG
+upMgKBbOqTCiK1V+cAZ43r5zDEJhRmqZNBUvfCpRWo8PrC8F7fDkSagkLxVzRiTpD1HSSeyTsMDT
+MY3LbyLPAA8X9bymvW0NUlpV4i9ZvscqYm21dFr9S4lGzBSdIiw2R/c=</ds:X509Certificate>
+    </ds:X509Data>
+    <PubKeyValue>
+      <ds:RSAKeyValue>
+        <ds:Modulus>AJUta+rkuLZbA3dmu8STBzoWgYQuE/1PE4QctG52l/bKKOFQKcdszfEAYIiFhcHmvdO2dVlCjzxT
+lRsfzWd3SJeAe4lecW4cDRhJ6CfaZEf7NOZTP3NeJ3/7hJy8nqZHQeUI9hlJffjFW0pIKcsD6z//
+TtcuKEAL1t376gr0E9yNI8+ZxkgTFBd49aVmqk+R8+mcaT/qOleDKCplaSMh1UX6vinnhfbg86p5
+ieiC4b/cv4PxydKUxYezbyhEniNP01f1fdWO+WQPCOWf4vpVO/xVJaPGrVgq+Y3gS8oAOxdVtXBQ
+FcNJXjbuY1NnO+WpZfyNAqN9G87YkhHP0Py7h1s=</ds:Modulus>
+        <ds:Exponent>AQAB</ds:Exponent>
+      </ds:RSAKeyValue>
+    </PubKeyValue>
+    <AuthenticationVersion>X002</AuthenticationVersion>
+  </AuthenticationPubKeyInfo>
+  <EncryptionPubKeyInfo>
+    <ds:X509Data>
+      <ds:X509IssuerSerial>
+        <ds:X509IssuerName>CN=OpenConcerto</ds:X509IssuerName>
+        <ds:X509SerialNumber>01</ds:X509SerialNumber>
+      </ds:X509IssuerSerial>
+      <ds:X509Certificate>MIIDQzCCAiugAwIBAgIBATANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJGUjEOMAwGA1UECgwF
+U3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZGcmFuY2UxHzAdBgkqhkiG9w0B
+CQEWEGNvbnRhY3RAc3luYXAuZnIwHhcNMTUwNDA4MjIyNDAwWhcNMjAwNDA4MjIyNDUwWjBlMQsw
+CQYDVQQGEwJGUjEOMAwGA1UECgwFU3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQI
+DAZGcmFuY2UxHzAdBgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDbiVYYJbfQA2fifRwyQJJOQqVURtiZHjgCZi7S3RjnusZSJVgbM1jz
+eR6kBlMAH7YplGGse6n+/O+BgZwNfPXGhPTUNJm0Ly0PhWW/b2tmEoIJbsavqEeY3PcFu8fWhQwm
+0+3je2MQSEhAIPPXSPnuNqzIVkh8lvYuBmAAktTAsfvQi1jB0jK7jrQCkWqfIETI1bAuYR4MjzjM
+9d7zSvAumJkHVbxPAu4szbSp/eSf5oiok+OXjzTBVQnjs0sLmY0bTqjNYbjRsTArLt/kI8lWdG82
+Lpq+k++1w6XGzf3yKko6PoWfjm7g2s6OscQasgDigBlUH2CbWhHXvs09MP9zAgMBAAEwDQYJKoZI
+hvcNAQELBQADggEBAFqvFPr81gc3rwkqKf1mqAGiBkNxWO2J7QG0xlmb65pdIJa/kQ9DACHt/Tw2
+ExHskk8Uai9VymGC+3JYNiJZfm+xL6LEjlWKXnxVqiZwuwkmDCXinN5lu+UH2MUeiOSFyLbXjEq4
+9JFBNM1WHQ9x6mmVUrDr1YT/ICw5v3lXDz7tC5+YYeLOqfwZuG0en02M41fdJkJAFVAUPX55m6yx
+Fvh+9eBRLtuwoO5q21QipZkAeeNn4iTdkOK4uYrkn1En4Y3CNPiC35ibCYFUAIHWE1H3xZjEgsd6
+ZIeM2gsmUyiE1rwSg/Tzh+KaehuDWsdSLfbbgvLvjjjuuLIljlY5DsY=</ds:X509Certificate>
+    </ds:X509Data>
+    <PubKeyValue>
+      <ds:RSAKeyValue>
+        <ds:Modulus>ANuJVhglt9ADZ+J9HDJAkk5CpVRG2JkeOAJmLtLdGOe6xlIlWBszWPN5HqQGUwAftimUYax7qf78
+74GBnA189caE9NQ0mbQvLQ+FZb9va2YSggluxq+oR5jc9wW7x9aFDCbT7eN7YxBISEAg89dI+e42
+rMhWSHyW9i4GYACS1MCx+9CLWMHSMruOtAKRap8gRMjVsC5hHgyPOMz13vNK8C6YmQdVvE8C7izN
+tKn95J/miKiT45ePNMFVCeOzSwuZjRtOqM1huNGxMCsu3+QjyVZ0bzYumr6T77XDpcbN/fIqSjo+
+hZ+ObuDazo6xxBqyAOKAGVQfYJtaEde+zT0w/3M=</ds:Modulus>
+        <ds:Exponent>AQAB</ds:Exponent>
+      </ds:RSAKeyValue>
+    </PubKeyValue>
+    <EncryptionVersion>E002</EncryptionVersion>
+  </EncryptionPubKeyInfo>
+  <PartnerID>XAPYP1</PartnerID>
+  <UserID>XAPYU1</UserID>
+</HIARequestOrderData>
+

@@ -1,0 +1,21 @@
+<ebicsUnsecuredRequest xmlns="http://www.ebics.org/H003" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Revision="1" Version="H003" xsi:schemaLocation="http://www.ebics.org/H003 http://www.ebics.org/H003/ebics_keymgmt_request.xsd">
+    <header authenticate="true">
+        <static>
+            <HostID>EBIXQUAL</HostID>
+            <PartnerID>XAPYP1</PartnerID>
+            <UserID>XAPYU1</UserID>
+            <OrderDetails>
+                <OrderType>HIA</OrderType>
+                <OrderID>A102</OrderID>
+                <OrderAttribute>DZNNN</OrderAttribute>
+            </OrderDetails>
+            <SecurityMedium>0000</SecurityMedium>
+        </static>
+        <mutable/>
+    </header>
+    <body>
+        <DataTransfer>
+            <OrderData>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</OrderData>
+        </DataTransfer>
+    </body>
+</ebicsUnsecuredRequest>
