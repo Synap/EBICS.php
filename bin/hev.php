@@ -1,4 +1,6 @@
 <?php
+require_once 'vendor/autoload.php';
+
 /**
  * Exemple de requête HEV
  *
@@ -16,25 +18,16 @@ $xml  = '<ebicsHEVRequest xmlns="http://www.ebics.org/H000">';
 $xml .= "<HostID>{$HostID}</HostID>";
 $xml .= '</ebicsHEVRequest>';
 
-$ch = curl_init();
+$request = new Sabre\HTTP\Request('POST', $url);
+$request->setBody($xml);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-curl_setopt($ch, CURLOPT_HEADER, false);
+$client = new Sabre\HTTP\Client();
+$client->addCurlSetting(CURLOPT_SSL_VERIFYPEER, false);
 
-/**
- * @todo intégrer la vérification SSL basée sur le CA
- */
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-$result = curl_exec($ch);
+$response = $client->send($request);
 
 $dom = new DOMDocument();
-$dom->loadXML($result);
+$dom->loadXML($response->getBodyAsString());
 
 echo "\nVoici la liste des versions compatibles avec ce serveur:\n\n";
 
@@ -46,4 +39,3 @@ foreach ($dom->getElementsByTagName('VersionNumber') as $version) {
 
 echo "\n";
 
-curl_close($ch);
