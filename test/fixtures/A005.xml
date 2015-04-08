@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SignaturePubKeyOrderData xmlns="http://www.ebics.org/S001" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ebics.org/S001 http://www.ebics.org/S001/ebics_signature.xsd">
+  <SignaturePubKeyInfo>
+    <ds:X509Data>
+      <ds:X509IssuerSerial>
+        <ds:X509IssuerName>CN=OpenConcerto</ds:X509IssuerName>
+        <ds:X509SerialNumber>01</ds:X509SerialNumber>
+      </ds:X509IssuerSerial>
+      <ds:X509Certificate>MIIDQzCCAiugAwIBAgIBATANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJGUjEOMAwGA1UECgwFU3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZGcmFuY2UxHzAdBgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwHhcNMTUwMzA2MTc0MTMzWhcNMjAwMzA2MTc0MjIzWjBlMQswCQYDVQQGEwJGUjEOMAwGA1UECgwFU3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZGcmFuY2UxHzAdBgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCzPi/nFMUKKE0Pj2/IalJ2df6LbuTrA79XvBBFy0ME2CmwVIbijXsJQcYYScweEYEXngqecoj3lyD+DQTPrizzHtgtKIkDYaHIit6vfJj/jeWtyIkjegsZdIjzhFOyCIRnqqu8Zp5K+q9nCbF5imX8SptwFq2FgsuhAHvNWeaErZccpNKvdUJjLWKzzB87uH9UAv1MaSRtNyxdstV7JYpuyOqtXQBZ3/kfXOF6V85J62Ban1wqBlmZAEIZf76yIGXGxPRv1HCN8rC8RerLYi/YpjU7/EjauigJ0wDvjx4wgCcDyJ37BGXM7CQe22H2D4Ow57jzHlYAmD96bWNxzqxAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAJmaTq6XcFNmomcyjYgKgFkeTxCgaIRetxhSE8Ig28vF+hVnigi5vLxjbXq3ft6mp/lBlcA8FTJr9HGZtjhdndgJmU6M1+Qt5qIWjKTnNSIgj/KrQL99KlE2tPrR0VesepOQGGFHwnZ/7LqsE1yEK51HJehWGneG3tClf3QpAyPv45mh9sbOIB4nIXHkAEdP2bPFWblJzi1CD9Ld8kenH1KxnrREEo5F+fo/gNejFPPNAz5ppjmp1rpktJlplC0oIAdqyQDsMym+TkQxMDyShNXjjaFGGNBYwUkfAxY3vfV3ZaZqG0cV1HtAtieDm+/2YYzBPY5fdW098wqX7YEpo+8=</ds:X509Certificate>
+    </ds:X509Data>
+    <PubKeyValue>
+      <ds:RSAKeyValue>
+        <ds:Modulus>AMLM+L+cUxQooTQ+Pb8hqUnZ1/otu5OsDv1e8EEXLQwTYKbBUhuKNewlBxhhJzB4RgReeCp5yiPeXIP4NBM+uLPMe2C0oiQNhociK3q98mP+N5a3IiSN6Cxl0iPOEU7IIhGeqq7xmnkr6r2cJsXmKZfxKm3AWrYWCy6EAe81Z5oStlxyk0q91QmMtYrPMHzu4f1QC/UxpJG03LF2y1Xslim7I6q1dAFnf+R9c4XpXzknrYFqfXCoGWZkAQhl/vrIgZcbE9G/UcI3ysLxF6stiL9imNTv8SNq6KAnTAO+PHjCAJwPInfsEZczsJB7bYfYPg7DnuPMeVgCYP3ptY3HOrE=</ds:Modulus>
+        <ds:Exponent>AQAB</ds:Exponent>
+      </ds:RSAKeyValue>
+      <TimeStamp>2015-03-06T18:42:24.376+01:00</TimeStamp>
+    </PubKeyValue>
+    <SignatureVersion>A005</SignatureVersion>
+  </SignaturePubKeyInfo>
+  <PartnerID>XAPYP1</PartnerID>
+  <UserID>XAPYU1</UserID>
+</SignaturePubKeyOrderData>
