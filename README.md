@@ -1,6 +1,8 @@
 FReeEBICS
 =========
 
+[![Join the chat at https://gitter.im/Synap/FReeEBICS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Synap/FReeEBICS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Un projet de bibliothèque PHP pour le protocole EBICS (version française)
 
 EBICS est LE standard du moment pour tout ce qui relève de l'automatisation des échanges bancaires. Cependant, ce
