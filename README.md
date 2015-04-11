@@ -20,3 +20,15 @@ Faute de financement, aucune date de sortie n'est prévue pour le moment et le d
 
 Si vous souhaitez nous aider financièrement, si vous avez une suggestion ou si vous souhaitez contribuer, vous pouvez
 envoyer un e-mail à l'adresse suivante: contact@synap.fr
+
+Liens
+=====
+
+- [ebics.org](http://www.ebics.org/)
+- [Service gratuit de test](https://software.elcimai.com/efs/accueil-qualif.jsp)
+- [Epics (bibliothèque en ruby)](https://github.com/railslove/epics)
+- [Module EBICS pour OpenConcerto (JAVA)](https://code.google.com/p/openconcerto/source/browse/trunk/Modules/Module+EBICS/)
+- [Un autre client EBICS en Java](http://sourceforge.net/projects/ebics/)
+- [An Introduction to
+XML Signature and XML Encryption
+with XMLSec](http://users.dcc.uchile.cl/~pcamacho/tutorial/web/xmlsec/xmlsec.html)
