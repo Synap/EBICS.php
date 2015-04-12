@@ -3,7 +3,7 @@ namespace Synap\EBICS;
 
 use DOMImplementation;
 
-class SignaturePubKeyOrderDataDOMBuilder
+class SignaturePubKeyOrderDataBuilder
 {
     /**
      * @return DOMDocument
