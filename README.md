@@ -1,7 +1,13 @@
-Synap / EBICS
+Synap / EBICS [![Join the chat at https://gitter.im/Synap/EBICS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Synap/EBICS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 =============
 
-[![Join the chat at https://gitter.im/Synap/EBICS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Synap/EBICS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Synap/EBICS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/Synap/EBICS/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/Synap/EBICS/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/build-status/master)
+
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb/big.png)](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb)
+
+
 
 Un projet de bibliothèque PHP pour le protocole EBICS (version française)
 
