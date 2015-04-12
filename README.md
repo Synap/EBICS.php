@@ -4,7 +4,6 @@ Synap / EBICS
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Synap/EBICS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Synap/EBICS/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/Synap/EBICS/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/build-status/master)
-[![Join the chat at https://gitter.im/Synap/EBICS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Synap/EBICS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb/big.png)](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb)
 
@@ -26,7 +25,7 @@ retenue pour ce projet est la [GNU Affero General Public](https://www.gnu.org/li
 Faute de financement, aucune date de sortie n'est prévue pour le moment et le développement se fait au fil de l'eau.
 
 Si vous souhaitez nous aider financièrement, si vous avez une suggestion ou si vous souhaitez contribuer, vous pouvez
-envoyer un e-mail à l'adresse suivante: contact@synap.fr
+envoyer un e-mail à l'adresse suivante: contact@synap.fr ou sur [gitter.im](https://gitter.im/Synap/EBICS?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 Liens
 =====
