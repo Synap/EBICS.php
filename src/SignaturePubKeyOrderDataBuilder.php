@@ -6,7 +6,7 @@ use DOMImplementation;
 class SignaturePubKeyOrderDataBuilder
 {
     /**
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function build($client)
     {
@@ -44,7 +44,7 @@ class SignaturePubKeyOrderDataBuilder
             $dom->createElementNS($ds, 'ds:X509SerialNumber', $data->getSerialNumber())
         );
 
-        $issuer = $data->appendChild(
+        $data->appendChild(
             $dom->createElementNS($ds, 'ds:X509Certificate', $data->getX509Certificate())
         );
 
