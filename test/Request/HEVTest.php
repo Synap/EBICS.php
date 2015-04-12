@@ -9,10 +9,6 @@ class HEVTest extends PHPUnit_Framework_TestCase
     {
         $xsd = __DIR__ . '/../xsd/H000/ebics_hev.xsd';
 
-            echo (new HEV('ABCD'))
-                ->getDOM()
-                ->saveXML();
-
         $this->assertTrue(
             (new HEV('ABCD'))
                 ->getDOM()
