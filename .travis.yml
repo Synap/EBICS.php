@@ -6,6 +6,10 @@ install:
   - composer install --dev --prefer-dist
 
 script:
-  - ./vendor/bin/phpcs --warning-severity=0 --standard=PSR2 src tests
+  - ./vendor/bin/phpcs --warning-severity=0 --standard=PSR2 src test
   - ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
-  - ./vendor/bin/phpcpd src/ tests/
+  - ./vendor/bin/phpcpd src/ test/
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
