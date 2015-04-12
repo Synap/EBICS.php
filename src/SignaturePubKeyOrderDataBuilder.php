@@ -6,9 +6,9 @@ use DOMImplementation;
 class SignaturePubKeyOrderDataDOMBuilder
 {
     /**
-     * @return DOMDocument;
+     * @return DOMDocument
      */
-    public function build(SignaturePubKeyOrderData $data)
+    public function build($client)
     {
         $ds = 'http://www.w3.org/2000/09/xmldsig#';
 
@@ -16,24 +16,24 @@ class SignaturePubKeyOrderDataDOMBuilder
 
         $root = $dom->documentElement;
 
-        $root->appendChild(
-            $info = $dom->createElement('SignaturePubKeyInfo')
+        $info = $root->appendChild(
+            $dom->createElement('SignaturePubKeyInfo')
         );
 
         $root->appendChild(
-            $dom->createElement('PartnerID', $this->partnerID)
+            $dom->createElement('PartnerID', $client->partner_id)
         );
 
         $root->appendChild(
-            $dom->createElement('UserID', $this->userID)
+            $dom->createElement('UserID', $client->user_id)
         );
 
-        $info->appendChild(
-            $data = $dom->createElementNS($ds, 'ds:X509Data')
+        $data = $info->appendChild(
+            $dom->createElementNS($ds, 'ds:X509Data')
         );
 
-        $data->appendChild(
-            $issuer = $dom->createElementNS($ds, 'ds:X509IssuerSerial')
+        $issuer = $data->appendChild(
+            $dom->createElementNS($ds, 'ds:X509IssuerSerial')
         );
 
         $issuer->appendChild(
@@ -44,16 +44,16 @@ class SignaturePubKeyOrderDataDOMBuilder
             $dom->createElementNS($ds, 'ds:X509SerialNumber', $data->getSerialNumber())
         );
 
-        $data->appendChild(
-            $issuer = $dom->createElementNS($ds, 'ds:X509Certificate', $data->getX509Certificate())
+        $issuer = $data->appendChild(
+            $dom->createElementNS($ds, 'ds:X509Certificate', $data->getX509Certificate())
         );
 
-        $info->appendChild(
-            $value = $dom->createElement('PubKeyValue')
+        $value = $info->appendChild(
+            $dom->createElement('PubKeyValue')
         );
 
-        $value->appendChild(
-            $rsa = $dom->createElementNS($ds, 'ds:RSAKeyValue')
+        $rsa = $value->appendChild(
+            $dom->createElementNS($ds, 'ds:RSAKeyValue')
         );
 
         $rsa->appendChild(
