@@ -3,21 +3,7 @@
     "description": "Un projet de bibliothèque PHP pour le protocole EBICS (version française)",
     "license": "AGPL-3.0",
     "require": {
-        "incenteev/composer-parameter-handler": "~2.1",
-        "sabre/http": "~3.0"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ],
-        "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ]
-    },
-    "extra": {
-        "incenteev-parameters": {
-            "file": "parameters.yml"
-        }
+        "sabre/http": "~3.0",
     },
     "require-dev": {
         "phpunit/phpunit": "~4.6",
