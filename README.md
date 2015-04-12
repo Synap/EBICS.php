@@ -3,7 +3,7 @@ Synap / EBICS
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Synap/EBICS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Synap/EBICS/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/Synap/EBICS/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/build-status/master)
+[![Build Status](https://travis-ci.org/Synap/EBICS.svg?branch=master)](https://travis-ci.org/Synap/EBICS)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb/big.png)](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb)
 
