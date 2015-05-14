@@ -18,7 +18,7 @@ $HostID   = empty($argv[2]) ? $parameters->host : $argv[2];
 
 // Template pour requête HEV
 $xsl = new DOMDocument();
-$xsl->load('xslt/hev.xslt');
+$xsl->load('xslt/hev.xsl');
 
 // Configuration du moteur de template
 $proc = new XSLTProcessor();
