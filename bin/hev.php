@@ -11,15 +11,25 @@ require_once 'vendor/autoload.php';
  *     php bin/hev.php http://127.0.0.1/ebics monHostID
  */
 
-$url      = $argv[1];
-$HostID   = $argv[2];
+$parameters = json_decode(file_get_contents('parameters.json'));
 
-$xml  = '<ebicsHEVRequest xmlns="http://www.ebics.org/H000">';
-$xml .= "<HostID>{$HostID}</HostID>";
-$xml .= '</ebicsHEVRequest>';
+$url      = empty($argv[1]) ? $parameters->url : $argv[1];
+$HostID   = empty($argv[2]) ? $parameters->host : $argv[2];
+
+// Template pour requête HEV
+$xsl = new DOMDocument();
+$xsl->load('xslt/hev.xslt');
+
+// Configuration du moteur de template
+$proc = new XSLTProcessor();
+$proc->setParameter('', 'HostID', $HostID);
+$proc->importStylesheet($xsl);
+
+// Récupération du résultat
+$doc = $proc->transformToDoc(new DOMDocument());
 
 $request = new Sabre\HTTP\Request('POST', $url);
-$request->setBody($xml);
+$request->setBody($doc->saveXML());
 
 $client = new Sabre\HTTP\Client();
 $client->addCurlSetting(CURLOPT_SSL_VERIFYPEER, false);
