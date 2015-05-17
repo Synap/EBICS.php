@@ -1,15 +1,16 @@
 language: php
 php:
-  - 5.4
-
+- 5.4
 install:
-  - composer install --dev --prefer-dist
-
+- composer install --dev --prefer-dist
 script:
-  - ./vendor/bin/phpcs --warning-severity=0 --standard=PSR2 src test
-  - ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
-  - ./vendor/bin/phpcpd src/ test/
-
+- ./vendor/bin/phpcs --warning-severity=0 --standard=PSR2 src test
+- ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+- ./vendor/bin/phpcpd src/ test/
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+- wget https://scrutinizer-ci.com/ocular.phar
+- php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+env:
+  global:
+  - secure: UqmkNch35j2r0P9D3e67Mlp6KMoJxmWuO60HGBFn/E6vDyuJNI8hARK0pKJKeSbKcJby8PKDNpr8zkbqqmAK8JQWFhLnnApu1LO1xdTuvE/K5Uc7wWd5iczj6okzQClCw+8ASMkLg/PajixkZAXMjU8TA4s503PILeZjalylqTE=
+  - secure: nNIBCCuKnCbaK6vqUnVXH08e/fw4s3E4AlDl4WTusxoDPt8QIDURHcImUTnGcorLYr+/40K7rMUjh8erQamMTfTUC1PpYl8s9hMnQgFcEmkmx28pius1lMKC4ZsFHlPZXQvbaiQUE7qZ7Z+1+xVBzGvQDzE0KE7CK/HiGAQq/3I=
