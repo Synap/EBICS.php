@@ -3,7 +3,7 @@ Synap / EBICS
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Synap/EBICS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Synap/EBICS/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
-[![Build Status](https://travis-ci.org/Synap/EBICS.svg?branch=master)](https://travis-ci.org/Synap/EBICS)
+[![Build Status](https://travis-ci.org/Synap/EBICS.php.svg?branch=master)](https://travis-ci.org/Synap/EBICS.php)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb/big.png)](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb)
 
@@ -26,6 +26,8 @@ Faute de financement, aucune date de sortie n'est prévue pour le moment et le d
 
 Si vous souhaitez nous aider financièrement, si vous avez une suggestion ou si vous souhaitez contribuer, vous pouvez
 envoyer un e-mail à l'adresse suivante: contact@synap.fr ou sur [gitter.im](https://gitter.im/Synap/EBICS?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
+Dons en bitcoins acceptés: 13YCTSCgAqAovQaPhBHGUjjrvGnZKf2gYs
 
 Liens
 =====
