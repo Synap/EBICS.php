@@ -1,29 +1,12 @@
 <?php
 require_once 'vendor/autoload.php';
 
+// Récupération des paramètres de connexion
 $parameters = json_decode(file_get_contents('parameters.json'));
 
-$cert = '-----BEGIN CERTIFICATE-----
-MIIDXTCCAkWgAwIBAgIJALOWNvSjrcFSMA0GCSqGSIb3DQEBCwUAMEUxCzAJBgNV
-BAYTAkFVMRMwEQYDVQQIDApTb21lLVN0YXRlMSEwHwYDVQQKDBhJbnRlcm5ldCBX
-aWRnaXRzIFB0eSBMdGQwHhcNMTUwNDEyMjE0MDEyWhcNMTYwNDExMjE0MDEyWjBF
-MQswCQYDVQQGEwJBVTETMBEGA1UECAwKU29tZS1TdGF0ZTEhMB8GA1UECgwYSW50
-ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
-CgKCAQEAwaFcfrIeVOlSmWgcwNYkgdjoRns+lsbnWFVk1uQT7b4091LCCLk46DIV
-BTnOYAhHHDhMDzHmN84Cjh0XzWqF/blZC2Wu5EalengeZZgS5MSNJeDc2PSvMYOF
-Psz6+0pLhfpRri8NsDSRgF3pN1dEg+Pni0mn6VIRnH3a/80oGtSVwdwogpORSfYM
-LkdqxS4FW7N5SPkbLgBSgpHm0Gcx4qn7KVTq1n0UDkX8scNDDPVJdwzD3lvoRu0X
-Kg9fqgWr2ICEq8ikSf7zEgMTSRpxoXotUAapsdJr0/JXUJOrXWFkGMfYTFKoroSp
-PQMbOwchv53gnwvex4pnZjdEijRCgQIDAQABo1AwTjAdBgNVHQ4EFgQUQnnyZlsl
-wz4T+Ds6F9fj44gxFiswHwYDVR0jBBgwFoAUQnnyZlslwz4T+Ds6F9fj44gxFisw
-DAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAdRPcgpn4P/UM4Z0SCoLW
-9Wo+GbXliwfDAD2YxumQ+eATeIJxQ58Hgtld4vgd7GwdwNVP9YiHJ2n4CmfafxE6
-JpJGtZsjuaKG/tF0+QnAYbu7E+0PjHvTj4626PeyMsnGY75CVktJwhAoBOnBp0yl
-AAbmBFyk4MnDDoCWVol3cUyoZTU3ES66zd5VpU201tAQgDvU8AK7qd/HltoksiNF
-mnOdgVTmHOAcelz7F/WuhoTATL+DwVQtwg2xB/pR65q6Qircpk5P4c7gxbcfqmoF
-VOOGjjaucS3ggcWhwki4JCVCbHjSv5Mi6WPTvx1j40Tw8/98gFSlUZjVzG0zkxkd
-Kw==
------END CERTIFICATE-----';
+// Récupération du certificat X509
+$cert = file_get_contents('test/fixtures/keys/A005/cert.pem');
+
 
 $cert_details = openssl_x509_parse($cert);
 
@@ -56,56 +39,33 @@ $params = array_merge(
 // la phase d'initialisation. Seule la longueur des valeurs l'est
 
 // Création de la signature A005
+$xsl = new DOMDocument();
+$xsl->load('xslt/SignaturePubKeyOrderData.xsl');
 
-$A005 = '<?xml version="1.0" encoding="UTF-8"?>
-<SignaturePubKeyOrderData xmlns="http://www.ebics.org/S001" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ebics.org/S001 http://www.ebics.org/S001/ebics_signature.xsd">
-  <SignaturePubKeyInfo>
-    <ds:X509Data>
-      <ds:X509IssuerSerial>
-        <ds:X509IssuerName>'.$params['X509IssuerName'].'</ds:X509IssuerName>
-        <ds:X509SerialNumber>'.$params['X509SerialNumber'].'</ds:X509SerialNumber>
-      </ds:X509IssuerSerial>
-      <ds:X509Certificate>'.$params['X509Certificate'].'</ds:X509Certificate>
-    </ds:X509Data>
-    <PubKeyValue>
-      <ds:RSAKeyValue>
-        <ds:Modulus>'.$params['Modulus'].'</ds:Modulus>
-        <ds:Exponent>'.$params['Exponent'].'</ds:Exponent>
-      </ds:RSAKeyValue>
-      <TimeStamp>2015-03-06T18:42:24.376+01:00</TimeStamp>
-    </PubKeyValue>
-    <SignatureVersion>A005</SignatureVersion>
-  </SignaturePubKeyInfo>
-  <PartnerID>'.$parameters->partner.'</PartnerID>
-  <UserID>'.$parameters->user.'</UserID>
-</SignaturePubKeyOrderData>';
+$proc = new XSLTProcessor();
+$proc->setParameter('', 'X509IssuerName', $params['X509IssuerName']);
+$proc->setParameter('', 'X509SerialNumber', $params['X509SerialNumber']);
+$proc->setParameter('', 'X509Certificate', $params['X509Certificate']);
+$proc->setParameter('', 'Modulus', $params['Modulus']);
+$proc->setParameter('', 'Exponent', $params['Exponent']);
+$proc->setParameter('', 'PartnerID', $parameters->partner);
+$proc->setParameter('', 'UserID', $parameters->user);
+$proc->setParameter('', 'TimeStamp', date('c'));
+$proc->importStylesheet($xsl);
 
-$A005 = base64_encode(gzcompress($A005));
+$A005 = $proc->transformToXML(new DOMDocument());
 
+// On compresse et on encode en base64
+$A005 = gzcompress($A005);
+$A005 = base64_encode($A005);
 
-$xml = '<?xml version="1.0"?>
-<ebicsUnsecuredRequest xmlns="http://www.ebics.org/H003" Revision="1" Version="H003">
-  <header authenticate="true">
-    <static>
-      <HostID>'.$parameters->host.'</HostID>
-      <PartnerID>'.$parameters->partner.'</PartnerID>
-      <UserID>'.$parameters->user.'</UserID>
-      <OrderDetails>
-        <OrderType>INI</OrderType>
-        <OrderID>A102</OrderID>
-        <OrderAttribute>DZNNN</OrderAttribute>
-      </OrderDetails>
-      <SecurityMedium>0000</SecurityMedium>
-    </static>
-    <mutable/>
-  </header>
-  <body>
-    <DataTransfer>
-      <OrderData>'.$A005.'</OrderData>
-    </DataTransfer>
-  </body>
-</ebicsUnsecuredRequest>';
+$xsl = new DOMDocument();
+$xsl->load('xslt/ebicsUnsecuredRequest.xsl');
+$proc->importStylesheet($xsl);
+$proc->setParameter('', 'HostID', $parameters->host);
+$proc->setParameter('', 'OrderData', $A005);
 
+$xml = $proc->transformToXML(new DOMDocument());
 
 $request = new Sabre\HTTP\Request('POST', $parameters->url);
 $request->setBody($xml);
@@ -114,5 +74,9 @@ $client = new Sabre\HTTP\Client();
 $client->addCurlSetting(CURLOPT_SSL_VERIFYPEER, false);
 
 $response = $client->send($request);
-echo $response->getBodyAsString();
 
+$dom = new DOMDocument();
+$dom->formatOutput = true;
+$dom->loadXML($response->getBodyAsString());
+
+echo $dom->saveXML();
