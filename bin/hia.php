@@ -3,26 +3,7 @@ require_once 'vendor/autoload.php';
 
 $parameters = json_decode(file_get_contents('parameters.json'));
 
-$X002 = '-----BEGIN CERTIFICATE-----
-MIIDQzCCAiugAwIBAgIBATANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJGUjEO
-MAwGA1UECgwFU3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZG
-cmFuY2UxHzAdBgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwHhcNMTUwNDA4
-MjIyNDAwWhcNMjAwNDA4MjIyNDUwWjBlMQswCQYDVQQGEwJGUjEOMAwGA1UECgwF
-U3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZGcmFuY2UxHzAd
-BgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwggEiMA0GCSqGSIb3DQEBAQUA
-A4IBDwAwggEKAoIBAQCVLWvq5Li2WwN3ZrvEkwc6FoGELhP9TxOEHLRudpf2yijh
-UCnHbM3xAGCIhYXB5r3TtnVZQo88U5UbH81nd0iXgHuJXnFuHA0YSegn2mRH+zTm
-Uz9zXid/+4ScvJ6mR0HlCPYZSX34xVtKSCnLA+s//07XLihAC9bd++oK9BPcjSPP
-mcZIExQXePWlZqpPkfPpnGk/6jpXgygqZWkjIdVF+r4p54X24POqeYnoguG/3L+D
-8cnSlMWHs28oRJ4jT9NX9X3VjvlkDwjln+L6VTv8VSWjxq1YKvmN4EvKADsXVbVw
-UBXDSV427mNTZzvlqWX8jQKjfRvO2JIRz9D8u4dbAgMBAAEwDQYJKoZIhvcNAQEL
-BQADggEBABPzNzAcDPaf5Ii3Z8NoCo/kftegVNRQSADpH8Y+5XERB+XqxVdlxxxb
-G/ozpRh97bNWedL0ncLs2rF8Os9R6Xi3z1Hge4ez/F314DZ6T6zsDvvSaT5IjbN+
-VtFlzIwoyc185c6YqKso3rr5qSSWK0hBnsFuqCu4h6y2ikrpQSZPu+mZoKfMkA6x
-yvIOkvbS9Wv8oIY1+qgyyjlfAsqGupMgKBbOqTCiK1V+cAZ43r5zDEJhRmqZNBUv
-fCpRWo8PrC8F7fDkSagkLxVzRiTpD1HSSeyTsMDTMY3LbyLPAA8X9bymvW0NUlpV
-4i9ZvscqYm21dFr9S4lGzBSdIiw2R/c=
------END CERTIFICATE-----';
+$X002 = file_get_contents('test/fixtures/keys/X002/cert.pem');
 
 $cert_details = openssl_x509_parse($X002);
 
@@ -51,26 +32,7 @@ $params['X002'] = array_merge(
     $params['X002']
 );
 
-$E002 = '-----BEGIN CERTIFICATE-----
-MIIDQzCCAiugAwIBAgIBATANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJGUjEO
-MAwGA1UECgwFU3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZG
-cmFuY2UxHzAdBgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwHhcNMTUwNDA4
-MjIyNDAwWhcNMjAwNDA4MjIyNDUwWjBlMQswCQYDVQQGEwJGUjEOMAwGA1UECgwF
-U3luYXAxFDASBgNVBAcMC01vbnRwZWxsaWVyMQ8wDQYDVQQIDAZGcmFuY2UxHzAd
-BgkqhkiG9w0BCQEWEGNvbnRhY3RAc3luYXAuZnIwggEiMA0GCSqGSIb3DQEBAQUA
-A4IBDwAwggEKAoIBAQCVLWvq5Li2WwN3ZrvEkwc6FoGELhP9TxOEHLRudpf2yijh
-UCnHbM3xAGCIhYXB5r3TtnVZQo88U5UbH81nd0iXgHuJXnFuHA0YSegn2mRH+zTm
-Uz9zXid/+4ScvJ6mR0HlCPYZSX34xVtKSCnLA+s//07XLihAC9bd++oK9BPcjSPP
-mcZIExQXePWlZqpPkfPpnGk/6jpXgygqZWkjIdVF+r4p54X24POqeYnoguG/3L+D
-8cnSlMWHs28oRJ4jT9NX9X3VjvlkDwjln+L6VTv8VSWjxq1YKvmN4EvKADsXVbVw
-UBXDSV427mNTZzvlqWX8jQKjfRvO2JIRz9D8u4dbAgMBAAEwDQYJKoZIhvcNAQEL
-BQADggEBABPzNzAcDPaf5Ii3Z8NoCo/kftegVNRQSADpH8Y+5XERB+XqxVdlxxxb
-G/ozpRh97bNWedL0ncLs2rF8Os9R6Xi3z1Hge4ez/F314DZ6T6zsDvvSaT5IjbN+
-VtFlzIwoyc185c6YqKso3rr5qSSWK0hBnsFuqCu4h6y2ikrpQSZPu+mZoKfMkA6x
-yvIOkvbS9Wv8oIY1+qgyyjlfAsqGupMgKBbOqTCiK1V+cAZ43r5zDEJhRmqZNBUv
-fCpRWo8PrC8F7fDkSagkLxVzRiTpD1HSSeyTsMDTMY3LbyLPAA8X9bymvW0NUlpV
-4i9ZvscqYm21dFr9S4lGzBSdIiw2R/c=
------END CERTIFICATE-----';
+$E002 = file_get_contents('test/fixtures/keys/E002/cert.pem');
 
 $cert_details = openssl_x509_parse($E002);
 
@@ -87,7 +49,6 @@ $params['E002'] = array(
         $E002
     )
 );
-
 
 $cert_details = openssl_pkey_get_details(openssl_pkey_get_public($E002));
 
