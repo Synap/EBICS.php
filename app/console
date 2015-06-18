@@ -3,7 +3,9 @@
 
 require_once 'vendor/autoload.php';
 
+use Synap\EBICS\Command\HEVCommand;
 use Symfony\Component\Console\Application;
 
-$application = new Application();
+$application = new Application('Synap/EBICS', 'dev');
+$application->add(new HEVCommand);
 $application->run();
