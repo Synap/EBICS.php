@@ -22,6 +22,9 @@ autre...
 La raison d'être de Synap System est d'encourager et d'aider le développement du logiciel libre. De ce fait, la licence
 retenue pour ce projet est la [GNU Affero General Public](https://www.gnu.org/licenses/agpl-3.0.html).
 
+Un système de double licence payante pour les entreprises qui jugeraient la licence GNU Affero General Public trop
+contraignante est aussi envisagé. Contactez-nous si cela vous intéresse.
+
 Faute de financement, aucune date de sortie n'est prévue pour le moment et le développement se fait au fil de l'eau.
 
 Si vous souhaitez nous aider financièrement, si vous avez une suggestion ou si vous souhaitez contribuer, vous pouvez
