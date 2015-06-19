@@ -8,4 +8,5 @@ use Symfony\Component\Console\Application;
 $application = new Application('Synap/EBICS', 'dev');
 $application->add(new Synap\EBICS\Command\HEVCommand);
 $application->add(new Synap\EBICS\Command\INICommand);
+$application->add(new Synap\EBICS\Command\HIACommand);
 $application->run();
