@@ -178,7 +178,3 @@ class HIACommand extends Command
         echo $dom->saveXML();
     }
 }
-
-
-
-

@@ -65,7 +65,6 @@ class HEVCommand extends Command
 
         $result = array();
         foreach ($dom->getElementsByTagName('VersionNumber') as $version) {
-
             $result[] = array(
                 $version->getAttribute('ProtocolVersion'),
                 "EBICS version {$version->nodeValue}"
@@ -82,7 +81,3 @@ class HEVCommand extends Command
 
     }
 }
-
-
-
-
