@@ -32,6 +32,34 @@ envoyer un e-mail à l'adresse suivante: contact@synap.fr ou sur [gitter.im](htt
 
 Dons en bitcoins acceptés: 13YCTSCgAqAovQaPhBHGUjjrvGnZKf2gYs
 
+Installation
+============
+
+Ce projet nécessite [composer](https://getcomposer.org/) pour l'installation des dépendances:
+
+    git clone https://github.com/Synap/EBICS.php.git
+    cd EBICS.php
+    composer install
+
+Une fois cette opération réalisée copiez le fichier `parameters.json-dist` dans un fichier `parameters.json` et éditez-le pour y insérer les paramètres de connexion au serveur EBICS.
+
+Ensuite ajoutez les clés privées et les certificats selon la liste suivante:
+
+- `test/fixtures/keys/A005/cert.pem`
+- `test/fixtures/keys/A005/key.pem`
+- `test/fixtures/keys/E002/cert.pem`
+- `test/fixtures/keys/E002/key.pem`
+- `test/fixtures/keys/X002/cert.pem`
+- `test/fixtures/keys/X002/key.pem`
+
+Vous pouvez alors tester les commandes suivantes:
+
+- `app/console ebics:hev`
+- `app/console ebics:hia`
+- `app/console ebics:ini`
+
+Attention! Ce projet est en cours de développement. N'utilisez ces commandes qu'à des fins de test et à vos risques et périls.
+
 Liens
 =====
 
@@ -43,3 +71,4 @@ Liens
 - [An Introduction to
 XML Signature and XML Encryption
 with XMLSec](http://users.dcc.uchile.cl/~pcamacho/tutorial/web/xmlsec/xmlsec.html)
+
