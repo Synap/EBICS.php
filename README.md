@@ -4,6 +4,7 @@ Synap / EBICS
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Synap/EBICS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Synap/EBICS/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Synap/EBICS/?branch=master)
 [![Build Status](https://travis-ci.org/Synap/EBICS.php.svg?branch=master)](https://travis-ci.org/Synap/EBICS.php)
+[![Gitter](https://badges.gitter.im/Synap/EBICS.php.svg)](https://gitter.im/Synap/EBICS.php?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb/big.png)](https://insight.sensiolabs.com/projects/0adf2438-560e-4dae-899d-7ea44230cafb)
 
