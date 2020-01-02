@@ -33,8 +33,6 @@ Faute de financement, aucune date de sortie n'est prévue pour le moment et le d
 Si vous souhaitez nous aider financièrement, si vous avez une suggestion ou si vous souhaitez contribuer, vous pouvez
 envoyer un e-mail à l'adresse suivante: contact@synap.fr ou sur [gitter.im](https://gitter.im/Synap/EBICS?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
-Dons en bitcoins acceptés: `1isDyjadd2bvEWhADc2URZedvtnQnC3e2`
-
 Installation
 ============
 
