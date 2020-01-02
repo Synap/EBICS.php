@@ -68,6 +68,7 @@ Liens
 
 - [ebics.org](http://www.ebics.org/)
 - [Service gratuit de test](https://software.elcimai.com/efs/accueil-qualif.jsp)
+- [Service USB gratuit de test](https://ubs-paymentstandards.ch/profile)
 - [Epics (bibliothèque en ruby)](https://github.com/railslove/epics)
 - [Module EBICS pour OpenConcerto (JAVA)](https://code.google.com/p/openconcerto/source/browse/trunk/Modules/Module+EBICS/)
 - [Un autre client EBICS en Java](http://sourceforge.net/projects/ebics/)
